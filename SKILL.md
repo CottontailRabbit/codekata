@@ -121,6 +121,7 @@ python, rust, cpp, go, js (JavaScript), ts (TypeScript), java, kotlin, swift, zi
 ## 히스토리 관리
 
 채점 결과를 `~/Desktop/deploy/codekata/data/kata_history.json`에 기록합니다.
+이 파일은 GitHub 레포 `CottontailRabbit/codekata`의 `data/kata_history.json`에 추적/푸시됩니다.
 
 ```json
 {
@@ -135,6 +136,22 @@ python, rust, cpp, go, js (JavaScript), ts (TypeScript), java, kotlin, swift, zi
 
 히스토리 파일이 없으면 새로 생성합니다.
 이전에 출제한 문제 제목을 확인하여 중복을 피합니다.
+
+### 원격 동기화 (GitHub) — 반드시 수행
+
+**세션 시작 시 (첫 문제 출제 전에 1회):**
+```bash
+cd ~/Desktop/deploy/codekata && git pull --ff-only origin main
+```
+pull 실패 시: 원인(권한, 충돌, 네트워크)을 사용자에게 한 줄로 알리고, 로컬 파일로 계속 진행합니다.
+
+**세션 종료 시 (마지막 문제의 채점/히스토리 기록 후):**
+```bash
+cd ~/Desktop/deploy/codekata && git add data/kata_history.json \
+  && git diff --cached --quiet || (git commit -m "kata: update history $(date +%F)" && git push origin main)
+```
+(diff가 비어 있으면 커밋/푸시를 건너뜁니다.)
+푸시 실패 시: 원인을 사용자에게 알리되 실패로 인해 로컬 히스토리가 손상되지 않도록 합니다.
 
 ## 통계 (`/kata stats`)
 
