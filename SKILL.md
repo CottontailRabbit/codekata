@@ -139,6 +139,8 @@ python, rust, cpp, go, js (JavaScript), ts (TypeScript), java, kotlin, swift, zi
 
 ### 원격 동기화 (GitHub) — 반드시 수행
 
+대상 파일: `data/kata_history.json`, `kata.py`, `SKILL.md` (레포 루트 `~/Desktop/deploy/codekata`).
+
 **세션 시작 시 (첫 문제 출제 전에 1회):**
 ```bash
 cd ~/Desktop/deploy/codekata && git pull --ff-only origin main
@@ -147,11 +149,20 @@ pull 실패 시: 원인(권한, 충돌, 네트워크)을 사용자에게 한 줄
 
 **세션 종료 시 (마지막 문제의 채점/히스토리 기록 후):**
 ```bash
-cd ~/Desktop/deploy/codekata && git add data/kata_history.json \
-  && git diff --cached --quiet || (git commit -m "kata: update history $(date +%F)" && git push origin main)
+cd ~/Desktop/deploy/codekata \
+  && git add data/kata_history.json kata.py SKILL.md \
+  && (git diff --cached --quiet || git commit -m "kata: session $(date +%F)") \
+  && (git push origin main 2>/tmp/kata_push.log \
+      || (echo "push 실패 — pull --rebase 후 재시도" && git pull --rebase origin main && git push origin main))
 ```
-(diff가 비어 있으면 커밋/푸시를 건너뜁니다.)
-푸시 실패 시: 원인을 사용자에게 알리되 실패로 인해 로컬 히스토리가 손상되지 않도록 합니다.
+- diff가 비어 있으면 커밋/푸시를 건너뜁니다.
+- non-fast-forward로 푸시 실패 시 자동으로 `pull --rebase` 후 재푸시.
+- 여전히 실패하면 원인을 사용자에게 알리되 로컬 파일은 손상 없이 유지합니다.
+
+`~/.claude/skills/kata/SKILL.md`는 이 파일과 내용이 같아야 합니다. 레포 SKILL.md를 수정하면 다음 명령으로 반영:
+```bash
+cp ~/Desktop/deploy/codekata/SKILL.md ~/.claude/skills/kata/SKILL.md
+```
 
 ## 통계 (`/kata stats`)
 
