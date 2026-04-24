@@ -15,7 +15,11 @@
       {"title": "Iterator로 제곱의 합 구하기", "date": "2026-04-23", "attempts": 3, "type": "typing", "result": "correct"},
       {"title": "Option map_or로 기본값 처리", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"},
       {"title": "불변/가변 빌림 충돌", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "correct"},
-      {"title": "HashMap fold로 등장 횟수 세기", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"}
+      {"title": "HashMap fold로 등장 횟수 세기", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"},
+      {"title": "벡터 평균 구하기 (f64)", "date": "2026-04-24", "attempts": 2, "type": "typing", "result": "correct"},
+      {"title": "u8 오버플로", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "fail"},
+      {"title": "첫 단어 추출", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"},
+      {"title": "클로저 캡처 모드", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "fail"}
     ],
     "cpp": [],
     "ts": [
