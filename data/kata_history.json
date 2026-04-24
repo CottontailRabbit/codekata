@@ -1,0 +1,25 @@
+{
+  "sessions": ["2026-04-20", "2026-04-20", "2026-04-20", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-23", "2026-04-24"],
+  "solved": {
+    "python": [{"title": "문자열 단어 수 세기", "date": "2026-04-20", "attempts": 2, "type": "typing"}],
+    "rust": [
+      {"title": "가변 벡터에 요소 추가", "date": "2026-04-20", "attempts": 3, "type": "typing", "result": "fail"},
+      {"title": "소유권 이동 후 사용", "date": "2026-04-20", "attempts": 1, "type": "quiz", "result": "correct"},
+      {"title": "짝수만 필터링", "date": "2026-04-20", "attempts": 3, "type": "typing", "result": "correct"},
+      {"title": "zip과 map으로 벡터 결합", "date": "2026-04-21", "attempts": 1, "type": "quiz", "result": "correct"},
+      {"title": "문자열 뒤집기", "date": "2026-04-22", "attempts": 3, "type": "typing", "result": "fail"},
+      {"title": "iterator 체인 출력 예측", "date": "2026-04-22", "attempts": 1, "type": "quiz", "result": "correct"},
+      {"title": "문자열 파싱 with 기본값", "date": "2026-04-22", "attempts": 2, "type": "typing", "result": "correct"},
+      {"title": "벡터 내림차순 정렬", "date": "2026-04-23", "attempts": 3, "type": "typing", "result": "fail"},
+      {"title": "Option 체이닝 출력 예측", "date": "2026-04-23", "attempts": 1, "type": "quiz", "result": "correct"},
+      {"title": "Iterator로 제곱의 합 구하기", "date": "2026-04-23", "attempts": 3, "type": "typing", "result": "correct"},
+      {"title": "Option map_or로 기본값 처리", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"},
+      {"title": "불변/가변 빌림 충돌", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "correct"},
+      {"title": "HashMap fold로 등장 횟수 세기", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"}
+    ],
+    "cpp": [],
+    "ts": [
+      {"title": "for 루프와 클로저", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "fail"}
+    ]
+  }
+}
