@@ -22,7 +22,10 @@
       {"title": "벡터 평균 구하기 (f64)", "date": "2026-04-24", "attempts": 2, "type": "typing", "result": "correct"},
       {"title": "u8 오버플로", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "fail"},
       {"title": "첫 단어 추출", "date": "2026-04-24", "attempts": 3, "type": "typing", "result": "correct"},
-      {"title": "클로저 캡처 모드", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "fail"}
+      {"title": "클로저 캡처 모드", "date": "2026-04-24", "attempts": 1, "type": "quiz", "result": "fail"},
+      {"title": "공백 구분 정수 문자열 → Vec<i32>", "date": "2026-05-04", "attempts": 3, "type": "typing", "result": "fail"},
+      {"title": "Vec::dedup 동작", "date": "2026-05-04", "attempts": 1, "type": "quiz", "result": "fail"},
+      {"title": "Lifetime과 빌림 검증", "date": "2026-05-04", "attempts": 1, "type": "quiz", "result": "correct"}
     ],
     "cpp": [],
     "ts": [
