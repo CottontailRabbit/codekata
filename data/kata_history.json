@@ -7,7 +7,8 @@
     "2026-04-24",
     "2026-04-30",
     "2026-05-04",
-    "2026-05-07"
+    "2026-05-07",
+    "2026-09-14"
   ],
   "solved": {
     "python": [
@@ -197,6 +198,13 @@
       {
         "title": "Lifetime과 빌림 검증",
         "date": "2026-05-04",
+        "attempts": 1,
+        "type": "quiz",
+        "result": "correct"
+      },
+      {
+        "title": "Rc + RefCell 참조 카운트 출력 예측",
+        "date": "2026-09-14",
         "attempts": 1,
         "type": "quiz",
         "result": "correct"
